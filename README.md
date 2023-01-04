@@ -1,5 +1,5 @@
 <h1 align="center">
-  😍 + ⚛
+  ⚛ + 🚀
   <br>Spaceship React<br>
 </h1>
 
