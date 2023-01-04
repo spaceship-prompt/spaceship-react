@@ -59,10 +59,15 @@ test_no_package() {
 
 test_mocked_version() {
   setupReact
-  local mocked_version="v16.0.0-mocked"
+
+  local mocked_version="16.0.0-mocked"
+  # FIXME: Remove this mock when updated docker image is released
+  spaceship::datafile() {
+    echo $mocked_version
+  }
 
   local prefix="%{%B%}$SPACESHIP_REACT_PREFIX%{%b%}"
-  local content="%{%B%F{$SPACESHIP_REACT_COLOR}%}$SPACESHIP_REACT_SYMBOL$mocked_version%{%b%f%}"
+  local content="%{%B%F{$SPACESHIP_REACT_COLOR}%}${SPACESHIP_REACT_SYMBOL}v$mocked_version%{%b%f%}"
   local suffix="%{%B%}$SPACESHIP_REACT_SUFFIX%{%b%}"
 
   local expected="$prefix$content$suffix"

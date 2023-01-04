@@ -23,13 +23,13 @@ spaceship_react() {
   [[ $SPACESHIP_REACT_SHOW == false ]] && return
 
   # Upsearch for react package.json file
-  local react_package="$(spaceship::upsearch ./node_modules/react/package.json)"
+  local react_package="$(spaceship::upsearch node_modules/react/package.json)"
 
   # If package.json file is not found, exit
   [[ -z "$react_package" ]] && return
 
   # Get react version from package.json file
-  local react_version="$(spaceship::datafile --json $react_package 'version')"
+  local react_version="$(spaceship::datafile --json $react_package version)"
 
   # Check if tool version is correct
   [[ -z $react_version || "$react_version" == "null" || "$react_version" == "undefined" ]] && return
