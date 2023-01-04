@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022-2016 [Name Surename](https://yourwebsite.com)
+Copyright (c) 2022-2016 [Denys Dovhan](https://denysdovhan.com) and Ryan Jentzsch
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
