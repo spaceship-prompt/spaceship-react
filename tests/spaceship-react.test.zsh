@@ -8,10 +8,12 @@ SHUNIT_PARENT=$0
 # Use system Spaceship or fallback to Spaceship Docker on CI
 typeset -g SPACESHIP_ROOT="${SPACESHIP_ROOT:=/spaceship}"
 
-# Mocked tool CLI
-mocked_version="v1.0.0-mocked"
-foobar() {
-  echo "$mocked_version"
+setupReact() {
+  mkdir -p $SHUNIT_TMPDIR/node_modules/react
+  cp $CWD/package.react.json $SHUNIT_TMPDIR/node_modules/react/package.json
+
+  # Enter the test directory
+  cd $SHUNIT_TMPDIR
 }
 
 # ------------------------------------------------------------------------------
@@ -26,13 +28,13 @@ setUp() {
 oneTimeSetUp() {
   export TERM="xterm-256color"
 
+  source "$(dirname $CWD)/spaceship-react.plugin.zsh"
   source "$SPACESHIP_ROOT/spaceship.zsh"
-  source "$(dirname $CWD)/spaceship-section.plugin.zsh"
 
   SPACESHIP_PROMPT_ASYNC=false
   SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
   SPACESHIP_PROMPT_ADD_NEWLINE=false
-  SPACESHIP_PROMPT_ORDER=(foobar)
+  SPACESHIP_PROMPT_ORDER=(react)
 
   echo "Spaceship version: $(spaceship --version)"
 }
@@ -48,7 +50,7 @@ oneTimeTearDown() {
 # TEST CASES
 # ------------------------------------------------------------------------------
 
-test_incorrect_env() {
+test_react_no_package() {
   local expected=""
   local actual="$(spaceship::testkit::render_prompt)"
 
@@ -56,12 +58,12 @@ test_incorrect_env() {
 }
 
 test_mocked_version() {
-  # Prepare the environment
-  touch $SHUNIT_TMPDIR/test.foo
+  setupReact
+  local mocked_version="v16.0.0-mocked"
 
-  local prefix="%{%B%}$SPACESHIP_FOOBAR_PREFIX%{%b%}"
-  local content="%{%B%F{$SPACESHIP_FOOBAR_COLOR}%}$SPACESHIP_FOOBAR_SYMBOL$mocked_version%{%b%f%}"
-  local suffix="%{%B%}$SPACESHIP_FOOBAR_SUFFIX%{%b%}"
+  local prefix="%{%B%}$SPACESHIP_REACT_PREFIX%{%b%}"
+  local content="%{%B%F{$SPACESHIP_REACT_COLOR}%}$SPACESHIP_REACT_SYMBOL$mocked_version%{%b%f%}"
+  local suffix="%{%B%}$SPACESHIP_REACT_SUFFIX%{%b%}"
 
   local expected="$prefix$content$suffix"
   local actual="$(spaceship::testkit::render_prompt)"

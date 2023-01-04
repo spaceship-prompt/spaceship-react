@@ -19,7 +19,7 @@ jobs:
         run: zsh --version
 
       - name: 🧪 Run Tests
-        run: ./tests/spaceship-section.test.zsh
+        run: ./tests/spaceship-react.test.zsh
 
   release:
     name: Release
