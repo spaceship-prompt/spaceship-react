@@ -1,10 +1,10 @@
 <h1 align="center">
-  😍 + 🚀
-  <br>Spaceship Section<br>
+  😍 + ⚛
+  <br>Spaceship React<br>
 </h1>
 
 <h4 align="center">
-  A <a href="https://template.com" target="_blank">Foobar</a> section for Spaceship prompt
+  A <a href="https://reactjs.org" target="_blank">React</a> section for Spaceship prompt
 </h4>
 
 <p align="center">
@@ -31,7 +31,7 @@
   </a>
 </p>
 
-Current Foobar version, through foobar (`😍`).
+Current React version from `package.json` file found in the closest `node_modules/react` package (`⚛`).
 
 ## Installing
 
@@ -42,91 +42,92 @@ You need to source this plugin somewhere in your dotfiles. Here's how to do it w
 Execute this command to clone this repo into Oh-My-Zsh plugin's folder:
 
 ```zsh
-git clone https://github.com/spaceship-prompt/spaceship-section.git $ZSH_CUSTOM/plugins/spaceship-section
+git clone https://github.com/spaceship-prompt/spaceship-react.git $ZSH_CUSTOM/plugins/spaceship-react
 ```
 
-Include `spaceship-section` in Oh-My-Zsh plugins list:
+Include `spaceship-react` in Oh-My-Zsh plugins list:
 
 ```zsh
-plugins=($plugins spaceship-section)
+plugins=($plugins spaceship-react)
 ```
 
 ### [zplug]
 
 ```zsh
-zplug "spaceship-prompt/spaceship-section"
+zplug "spaceship-prompt/spaceship-react"
 ```
 
 ### [antigen]
 
 ```zsh
-antigen bundle "spaceship-prompt/spaceship-section"
+antigen bundle "spaceship-prompt/spaceship-react"
 ```
 
 ### [antibody]
 
 ```zsh
-antibody bundle "spaceship-prompt/spaceship-section"
+antibody bundle "spaceship-prompt/spaceship-react"
 ```
 
 ### [zinit]
 
 ```zsh
-zinit light "spaceship-prompt/spaceship-section"
+zinit light "spaceship-prompt/spaceship-react"
 ```
 
 ### [zgen]
 
 ```zsh
-zgen load "spaceship-prompt/spaceship-section"
+zgen load "spaceship-prompt/spaceship-react"
 ```
 
 ### [sheldon]
 
 ```toml
-[plugins.spaceship-section]
-github = "spaceship-prompt/spaceship-section"
+[plugins.spaceship-react]
+github = "spaceship-prompt/spaceship-react"
 ```
 
 ### Manual
 
 If none of the above methods works for you, you can install Spaceship manually.
 
-1. Clone this repo somewhere, for example to `$HOME/.zsh/spaceship-section`.
+1. Clone this repo somewhere, for example to `$HOME/.zsh/spaceship-react`.
 2. Source this section in your `~/.zshrc`.
 
 ### Example
 
 ```zsh
 mkdir -p "$HOME/.zsh"
-git clone --depth=1 https://github.com/spaceship-prompt/spaceship-section.git "$HOME/.zsh/spaceship-section"
+git clone --depth=1 https://github.com/spaceship-prompt/spaceship-react.git "$HOME/.zsh/spaceship-react"
 ```
 
 For initializing prompt system add this to your `.zshrc`:
 
 ```zsh title=".zshrc"
-source "~/.zsh/spaceship-section/spaceship-section.plugin.zsh"
+source "~/.zsh/spaceship-react/spaceship-react.plugin.zsh"
 ```
 
 ## Usage
 
-After installing, add the following line to your `.zshrc` in order to include Ember section in the prompt:
+After installing, add the following line to your `.zshrc` in order to include React section in the prompt:
 
 ```zsh
-spaceship add foobar
+spaceship add react
 ```
 
 ## Options
 
 This section is shown only in directories within a foobar context.
 
-| Variable                   |              Default               | Meaning                              |
-| :------------------------- | :--------------------------------: | ------------------------------------ |
-| `SPACESHIP_FOOBAR_SHOW`   |               `true`               | Show current section                 |
-| `SPACESHIP_FOOBAR_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before section                |
-| `SPACESHIP_FOOBAR_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after section                 |
-| `SPACESHIP_FOOBAR_SYMBOL` |               `😍·`                | Character to be shown before version |
-| `SPACESHIP_FOOBAR_COLOR`  |             `yellow`               | Color of section                     |
+| Variable                 |  Default  | Meaning                              |
+| :----------------------- | :-------: | ------------------------------------ |
+| `SPACESHIP_REACT_SHOW`   |   `true`  | Show current section                 |
+| `SPACESHIP_REACT_ASYNC`  |   `true`  | Render section asynchronously        |
+| `SPACESHIP_REACT_PREFIX` |   `via `  | Prefix before section                |
+| `SPACESHIP_REACT_SUFFIX` |    ` `    | Suffix after section                 |
+| `SPACESHIP_REACT_SYMBOL` |    `⚛ `   | Character to be shown before version |
+| `SPACESHIP_REACT_COLOR`  |   `cyan`  | Color of section                     |
 
 ## Contributing
 
