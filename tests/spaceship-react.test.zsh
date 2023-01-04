@@ -50,7 +50,7 @@ oneTimeTearDown() {
 # TEST CASES
 # ------------------------------------------------------------------------------
 
-test_react_no_package() {
+test_no_package() {
   local expected=""
   local actual="$(spaceship::testkit::render_prompt)"
 
