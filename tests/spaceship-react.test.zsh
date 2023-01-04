@@ -28,8 +28,8 @@ setUp() {
 oneTimeSetUp() {
   export TERM="xterm-256color"
 
-  source "$(dirname $CWD)/spaceship-react.plugin.zsh"
   source "$SPACESHIP_ROOT/spaceship.zsh"
+  source "$(dirname $CWD)/spaceship-react.plugin.zsh"
 
   SPACESHIP_PROMPT_ASYNC=false
   SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
