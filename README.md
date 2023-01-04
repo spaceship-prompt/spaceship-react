@@ -8,12 +8,12 @@
 </h4>
 
 <p align="center">
-  <a href="https://github.com/spaceship-prompt/spaceship-section/releases">
-    <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-section.svg?style=flat-square"
+  <a href="https://github.com/spaceship-prompt/spaceship-react/releases">
+    <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-react.svg?style=flat-square"
       alt="GitHub Release" />
   </a>
 
-  <a href="https://github.com/spaceship-prompt/spaceship-section/actions">
+  <a href="https://github.com/spaceship-prompt/spaceship-react/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/spaceship-prompt/spaceship-gradle/ci.yaml?style=flat-square"
       alt="GitHub Workflow Status" />
   </a>
@@ -118,7 +118,7 @@ spaceship add react
 
 ## Options
 
-This section is shown only in directories within a foobar context.
+This section is shown only in directories within a React context.
 
 | Variable                 |  Default  | Meaning                              |
 | :----------------------- | :-------: | ------------------------------------ |
